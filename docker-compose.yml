@@ -1,0 +1,7 @@
+  
+version: '2'
+services:
+  web:
+    image: christophperrins/example:latest
+    ports:
+      - "9000:9000"
