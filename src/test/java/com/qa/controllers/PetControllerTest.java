@@ -58,8 +58,9 @@ public class PetControllerTest {
 
         assertEquals(petController.deletePet(5L).getName(), "Pip");
     }
-  
-    public void listAllPets() {
+
+    @Test
+    public void listAllPetsTest() {
         List<Pets> petList = new ArrayList<>();
 
         Pets pet1 = new Pets();
