@@ -57,4 +57,12 @@ public class Pets {
     public void setColour(String colour) {
         this.colour = colour;
     }
+
+
+    public void updateAll(Pets pet){
+        this.age = pet.getAge();
+        this.colour = pet.getColour();
+        this.name = pet.getName();
+        this.type = pet.getType();
+    }
 }
