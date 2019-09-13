@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+
+import java.util.List;
+
 @RestController
 @CrossOrigin()
 public class PetController {
@@ -21,6 +24,16 @@ public class PetController {
         existing.updateAll(pet);
 
         return repository.saveAndFlush(existing);
+    }
+
+    @RequestMapping(value = "pets", method = RequestMethod.GET)
+    public List<Pets> getPets(){
+        return repository.findAll();
+    }
+
+    @RequestMapping(value = "pets", method = RequestMethod.POST)
+    public Pets createPet(@RequestBody Pets p){
+        return repository.saveAndFlush(p);
     }
 
 
