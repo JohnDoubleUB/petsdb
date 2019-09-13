@@ -23,7 +23,6 @@ public class PetController {
         repository.delete(existing);
         return existing;
     }
-     
       
     @Transactional
     @RequestMapping(value = "pets/{id}", method = RequestMethod.PUT)
